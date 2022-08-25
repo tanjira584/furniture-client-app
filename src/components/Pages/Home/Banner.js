@@ -7,7 +7,16 @@ const Banner = () => {
         <div
             className="banner-section"
             style={{ backgroundImage: `url(${banner1})` }}
-        ></div>
+        >
+            <div className="overlay">
+                <div className="container-md">
+                    <div className="banner-content">
+                        <h2>Stunning Bedroom Furniture</h2>
+                        <button>Shop Bedroom now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     );
 };
 
