@@ -1,0 +1,24 @@
+.banner-section {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.banner-section .overlay {
+    background-color: rgba(0, 0, 0, 0.35);
+}
+.banner-content {
+    padding: 200px 0;
+    text-align: center;
+}
+.banner-content h2 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+.banner-content button {
+    padding: 10px 20px;
+    background-color: #799a79;
+    border: 1px solid #799a79;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 4px;
+}
