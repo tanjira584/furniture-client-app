@@ -1,0 +1,27 @@
+.header-top {
+    background: #000;
+}
+.header-top button {
+    background-color: #799a79;
+    border: none;
+    padding: 8px 10px;
+}
+.header-top .icon {
+    margin-right: 6px;
+}
+.header-main {
+    background-color: #222222;
+}
+.header-main .logo {
+    width: 250px;
+}
+.header-main .logo img {
+    width: 100%;
+}
+.main-menu li a {
+    color: #fff;
+    font-size: 18px;
+}
+.main-menu li a:hover {
+    color: #fff;
+}
