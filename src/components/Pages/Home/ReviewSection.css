@@ -1,0 +1,30 @@
+.content-block {
+    position: relative;
+    background-color: #f7f7f7;
+    margin-bottom: 40px;
+}
+.content-block::before {
+    content: " ";
+    position: absolute;
+    left: 40px;
+    bottom: -50px;
+    border-top: 30px solid #f7f7f7;
+    border-left: 0px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 20px solid transparent;
+}
+.rating-icon {
+    margin-bottom: 20px;
+}
+.rating-icon ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.rating-icon ul li {
+    display: inline-block;
+    margin-right: 4px;
+}
+.rating-icon ul li .icon {
+    color: #e7711b;
+}

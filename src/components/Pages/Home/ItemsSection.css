@@ -1,0 +1,33 @@
+.items-section {
+    padding: 50px 0;
+}
+.product button {
+    padding: 10px 20px;
+    background-color: #799a79;
+    border: 1px solid #799a79;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 4px;
+}
+.product {
+    position: relative;
+}
+.product button {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+.price p {
+    color: #6b7280;
+    font-size: 20px;
+    font-style: italic;
+}
+.price p span {
+    color: #799a79;
+}
+.product .img img {
+    transition: 0.5s all;
+}
+.product:hover .img img {
+    transform: scale(1.02);
+}

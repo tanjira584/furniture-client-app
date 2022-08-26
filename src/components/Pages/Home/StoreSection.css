@@ -1,0 +1,17 @@
+.store-area {
+    padding: 50px 0;
+}
+.store-content ul {
+    list-style: none;
+}
+.store-content button {
+    padding: 10px 20px;
+    background-color: #799a79;
+    border: 1px solid #799a79;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 4px;
+}
+.store-img img {
+    width: 100%;
+}
