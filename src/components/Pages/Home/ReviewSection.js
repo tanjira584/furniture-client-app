@@ -1,4 +1,5 @@
 import { faGem, faStar } from "@fortawesome/free-regular-svg-icons";
+import { faDiagnoses } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import "./ReviewSection.css";
@@ -123,7 +124,7 @@ const ReviewSection = () => {
                                     </div>
                                     <div>
                                         <FontAwesomeIcon
-                                            icon={faGem}
+                                            icon={faDiagnoses}
                                         ></FontAwesomeIcon>
                                     </div>
                                 </div>
