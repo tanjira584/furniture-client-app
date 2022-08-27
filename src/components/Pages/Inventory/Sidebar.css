@@ -1,0 +1,21 @@
+.sidebar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.sidebar ul li {
+    margin-left: 12px;
+    margin-right: 0px;
+}
+.sidebar ul li a {
+    display: block;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 4px;
+    border-bottom: 1px solid silver;
+    color: rgb(54, 54, 54);
+    transition: 0.5s all;
+}
+.sidebar ul li a:hover {
+    color: blue;
+}

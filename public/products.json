@@ -9,7 +9,7 @@
         "desc": "Criss-cross lattice overlays the two glass fronted door and sides which flank the central open shelves in this inviting and oh-so-useful new credenza. With three drawers above for even more storage options, and an attractive Mabry Mill Burnished Blue, endless possibilities are at your fingertips!",
         "rating": 5,
         "category": "chairs",
-        "sub-cate": "ottomans"
+        "subcate": "ottomans"
     },
     {
         "id": "2",
@@ -21,11 +21,11 @@
         "desc": "Criss-cross lattice overlays the two glass fronted door and sides which flank the central open shelves in this inviting and oh-so-useful new credenza. With three drawers above for even more storage options, and an attractive Mabry Mill Burnished Blue, endless possibilities are at your fingertips!",
         "rating": 4,
         "category": "tables",
-        "sub-cate": "coctail tables"
+        "subcate": "coctail tables"
     },
     {
         "id": "3",
-        "name": "Lane Tessa Alabaster Sofa with Alabaster Pearl, Gorgeous Nature and Valencia Champagne Accent Pillows",
+        "name": "Lane Tessa Alabaster Sofa with Alabaster Pearl",
         "img": "https://i.ibb.co/d68J5My/sofa1.jpg",
         "price": 699.99,
         "quantity": 4,
@@ -33,11 +33,11 @@
         "desc": "Criss-cross lattice overlays the two glass fronted door and sides which flank the central open shelves in this inviting and oh-so-useful new credenza. With three drawers above for even more storage options, and an attractive Mabry Mill Burnished Blue, endless possibilities are at your fingertips!",
         "rating": 5,
         "category": "sofa",
-        "sub-cate": "fabric sofa"
+        "subcate": "fabric sofa"
     },
     {
         "id": "4",
-        "name": "Lane Tessa Alabaster Sofa and Loveseat with Alabaster Pearl, Gorgeous Nature and Valencia Champagne Accent Pillows",
+        "name": "Lane Tessa Alabaster Sofa and Loveseat with Alabaster Pearl,",
         "img": "https://i.ibb.co/HP2ZdGr/room1.jpg",
         "price": 1389.99,
         "quantity": 6,
@@ -45,7 +45,7 @@
         "desc": "Criss-cross lattice overlays the two glass fronted door and sides which flank the central open shelves in this inviting and oh-so-useful new credenza. With three drawers above for even more storage options, and an attractive Mabry Mill Burnished Blue, endless possibilities are at your fingertips!",
         "rating": 3,
         "category": "living room sets",
-        "sub-cate": "fabric living room set"
+        "subcate": "fabric living room set"
     },
     {
         "id": "5",
@@ -57,7 +57,7 @@
         "desc": "Criss-cross lattice overlays the two glass fronted door and sides which flank the central open shelves in this inviting and oh-so-useful new credenza. With three drawers above for even more storage options, and an attractive Mabry Mill Burnished Blue, endless possibilities are at your fingertips!",
         "rating": 5,
         "category": "media center",
-        "sub-cate": "accent cabinet"
+        "subcate": "accent cabinet"
     },
     {
         "id": "6",
@@ -69,6 +69,6 @@
         "desc": "Criss-cross lattice overlays the two glass fronted door and sides which flank the central open shelves in this inviting and oh-so-useful new credenza. With three drawers above for even more storage options, and an attractive Mabry Mill Burnished Blue, endless possibilities are at your fingertips!",
         "rating": 4,
         "category": "loveseat",
-        "sub-cate": "fabric loveseat"
+        "subcate": "fabric loveseat"
     }
 ]

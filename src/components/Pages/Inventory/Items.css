@@ -1,0 +1,37 @@
+.item-content {
+    position: relative;
+    height: 100%;
+}
+.item-content .update-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.item-content .update-btn button {
+    padding: 7px 20px;
+    background-color: #799a79;
+    border: 1px solid #799a79;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 4px;
+}
+.item-content .delete-btn button {
+    padding: 7px 20px;
+    background-color: #dc3545;
+    border: 1px solid #dc3545;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 4px;
+}
+.item-content .item-price,
+.item-content .item-quantity {
+    color: #3a6d3a;
+    font-size: 20px;
+    font-style: italic;
+}
+.single-item img {
+    transition: 0.5s all;
+}
+.single-item:hover img {
+    transform: scale(1.02);
+}

@@ -1,0 +1,19 @@
+.category-area {
+    padding: 50px 0;
+    padding-bottom: 50px;
+}
+.catagory {
+    text-align: center;
+    padding: 16px;
+}
+.catagory .img {
+    margin-bottom: 100px;
+}
+.catagory .img img {
+    width: 100%;
+}
+.catagory a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+}

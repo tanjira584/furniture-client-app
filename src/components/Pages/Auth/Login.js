@@ -13,12 +13,11 @@ import {
 import auth from "../../../firebase.init";
 const Login = () => {
     const [user, setUser] = useState({ email: "", password: "" });
-    const navigate = useNavigate();
+    const [authuser] = useAuthState(auth);
     const location = useLocation();
     const from = location?.state?.from?.pathname || "/";
 
-    const [signInWithGoogle, guser, gloading, gerror] =
-        useSignInWithGoogle(auth);
+    const [signInWithGoogle, guser, gloading] = useSignInWithGoogle(auth);
     const [signInWithEmailAndPassword, euser, eloading, eerror] =
         useSignInWithEmailAndPassword(auth);
 
@@ -34,8 +33,11 @@ const Login = () => {
     const handleGoogle = (e) => {
         signInWithGoogle();
     };
-    if (euser || guser) {
+    if (authuser || euser || guser) {
         return <Navigate to={from}></Navigate>;
+    }
+    if (gloading || eloading) {
+        return <p className="text-center mt-5">Loading...</p>;
     }
     return (
         <div>
