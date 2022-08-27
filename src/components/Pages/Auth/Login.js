@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Login = () => {
     const [user, setUser] = useState({ email: "", password: "" });
 
-    const hangleChange = (e) => {
+    const handleChange = (e) => {
         setUser({ ...user, [e.target.name]: e.target.value });
     };
     const handleSubmit = (e) => {
@@ -37,7 +37,7 @@ const Login = () => {
                                     id="email"
                                     name="email"
                                     placeholder="Enter email"
-                                    onChange={hangleChange}
+                                    onChange={handleChange}
                                 />
                             </div>
                             <div class="mb-3">
@@ -50,7 +50,7 @@ const Login = () => {
                                     id="password"
                                     name="password"
                                     placeholder="Enter password"
-                                    onChange={hangleChange}
+                                    onChange={handleChange}
                                 />
                             </div>
                             <div>
@@ -60,10 +60,10 @@ const Login = () => {
 
                         <div className="d-flex justify-content-between align-items-center mb-4 reset-btn mt-3">
                             <div>
-                                <Link to="/signup">Create Account</Link>
+                                <button>Forgot Password</button>
                             </div>
                             <div>
-                                <button>Forgot Password</button>
+                                <Link to="/signup">Create Account</Link>
                             </div>
                         </div>
                         <div className="d-flex align-items-center">
