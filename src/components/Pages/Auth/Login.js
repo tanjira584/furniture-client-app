@@ -2,18 +2,41 @@ import React, { useState } from "react";
 import Footer from "../../share/Footer";
 import Header from "../../share/Header";
 import "./Login.css";
-import { Link } from "react-router-dom";
-
+import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
+import google from "./../../../images/google.svg";
+import { toast } from "react-toastify";
+import {
+    useSignInWithGoogle,
+    useSignInWithEmailAndPassword,
+    useAuthState,
+} from "react-firebase-hooks/auth";
+import auth from "../../../firebase.init";
 const Login = () => {
     const [user, setUser] = useState({ email: "", password: "" });
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location?.state?.from?.pathname || "/";
+
+    const [signInWithGoogle, guser, gloading, gerror] =
+        useSignInWithGoogle(auth);
+    const [signInWithEmailAndPassword, euser, eloading, eerror] =
+        useSignInWithEmailAndPassword(auth);
 
     const handleChange = (e) => {
         setUser({ ...user, [e.target.name]: e.target.value });
     };
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(user);
+        signInWithEmailAndPassword(user.email, user.password);
+        e.target.reset();
+        setUser({ email: "", password: "" });
     };
+    const handleGoogle = (e) => {
+        signInWithGoogle();
+    };
+    if (euser || guser) {
+        return <Navigate to={from}></Navigate>;
+    }
     return (
         <div>
             <Header></Header>
@@ -27,7 +50,7 @@ const Login = () => {
                             following the link below.
                         </p>
                         <form onSubmit={handleSubmit}>
-                            <div class="mb-3">
+                            <div className="mb-3">
                                 <label htmlFor="email" className="form-label">
                                     Email address
                                 </label>
@@ -40,7 +63,7 @@ const Login = () => {
                                     onChange={handleChange}
                                 />
                             </div>
-                            <div class="mb-3">
+                            <div className="mb-3">
                                 <label htmlFor="email" className="form-label">
                                     Password
                                 </label>
@@ -72,7 +95,10 @@ const Login = () => {
                             <div className="w-50 border"></div>
                         </div>
                         <div className="mt-4 google-btn">
-                            <button>Continue With Google</button>
+                            <button onClick={handleGoogle}>
+                                {" "}
+                                <img src={google} alt="" /> Continue With Google
+                            </button>
                         </div>
                     </div>
                 </div>

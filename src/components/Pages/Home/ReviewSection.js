@@ -1,9 +1,10 @@
-import { faGem, faStar } from "@fortawesome/free-regular-svg-icons";
-import { faDiagnoses } from "@fortawesome/free-solid-svg-icons";
+import { faStar } from "@fortawesome/free-regular-svg-icons";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import user1 from "./../../../images/user1.png";
 import "./ReviewSection.css";
+import google from "./../../../images/google.svg";
 const ReviewSection = () => {
     return (
         <div className="reviews-area py-5">
@@ -47,10 +48,8 @@ const ReviewSection = () => {
                                             </li>
                                         </ul>
                                     </div>
-                                    <div>
-                                        <FontAwesomeIcon
-                                            icon={faGem}
-                                        ></FontAwesomeIcon>
+                                    <div className="google-icon">
+                                        <img src={google} alt="" />
                                     </div>
                                 </div>
                                 <div className="content">
@@ -122,10 +121,8 @@ const ReviewSection = () => {
                                             </li>
                                         </ul>
                                     </div>
-                                    <div>
-                                        <FontAwesomeIcon
-                                            icon={faDiagnoses}
-                                        ></FontAwesomeIcon>
+                                    <div className="google-icon">
+                                        <img src={google} alt="" />
                                     </div>
                                 </div>
                                 <div className="content">
@@ -197,10 +194,8 @@ const ReviewSection = () => {
                                             </li>
                                         </ul>
                                     </div>
-                                    <div>
-                                        <FontAwesomeIcon
-                                            icon={faGem}
-                                        ></FontAwesomeIcon>
+                                    <div className="google-icon">
+                                        <img src={google} alt="" />
                                     </div>
                                 </div>
                                 <div className="content">

@@ -31,3 +31,6 @@
 .user-block img {
     width: 100%;
 }
+.google-icon img {
+    width: 20px !important;
+}

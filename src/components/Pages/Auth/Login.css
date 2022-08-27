@@ -11,10 +11,17 @@
     border: 1px solid silver;
     border-radius: 6px;
     background-color: transparent;
+    font-weight: 500;
+    color: #799a79;
     transition: 0.5s all;
 }
 .google-btn button:hover {
     border: 1px solid #799a79;
+}
+.google-btn button img {
+    width: 24px;
+    height: 24px;
+    margin-right: 6px;
 }
 .reset-btn a,
 .reset-btn button {
