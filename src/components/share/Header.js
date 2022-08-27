@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import "./Header.css";
 import logo from "./../../images/logo.avif";
+import { Link } from "react-router-dom";
 
 const Header = () => {
     return (
@@ -31,9 +32,10 @@ const Header = () => {
             <section className="header-main">
                 <nav class="navbar navbar-expand-lg">
                     <div class="container-md">
-                        <a class="navbar-brand logo" href="/">
+                        <Link class="navbar-brand logo" to="/">
                             <img src={logo} alt="" />
-                        </a>
+                        </Link>
+
                         <button
                             class="navbar-toggler text-light"
                             type="button"
@@ -51,18 +53,19 @@ const Header = () => {
                         >
                             <ul class="navbar-nav main-menu ms-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
-                                    <a
-                                        class="nav-link"
-                                        aria-current="page"
-                                        href="/"
-                                    >
+                                    <Link class="nav-link" to="/">
                                         Home
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href=" ">
+                                    <Link class="nav-link" to="/inventory">
+                                        Inventory
+                                    </Link>
+                                </li>
+                                <li class="nav-item">
+                                    <Link class="nav-link" to="/login">
                                         Login
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>

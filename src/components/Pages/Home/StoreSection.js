@@ -1,6 +1,6 @@
 import React from "react";
 import "./StoreSection.css";
-import store from "./../../../images/room1.jpg";
+import store from "./../../../images/store.jpg";
 const StoreSection = () => {
     return (
         <div className="store-area">
@@ -25,7 +25,7 @@ const StoreSection = () => {
                         </div>
                     </div>
                     <div className="col-md-7">
-                        <div className="store-img">
+                        <div className="store-img ">
                             <img src={store} alt="" />
                         </div>
                     </div>

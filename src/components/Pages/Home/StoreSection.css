@@ -12,6 +12,10 @@
     font-weight: 500;
     border-radius: 4px;
 }
+.store-img {
+    max-height: 400px;
+    overflow: hidden;
+}
 .store-img img {
     width: 100%;
 }

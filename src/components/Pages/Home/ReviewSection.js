@@ -2,6 +2,7 @@ import { faGem, faStar } from "@fortawesome/free-regular-svg-icons";
 import { faDiagnoses } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import user1 from "./../../../images/user1.png";
 import "./ReviewSection.css";
 const ReviewSection = () => {
     return (
@@ -72,14 +73,13 @@ const ReviewSection = () => {
                                         width: "70px",
                                         height: "70px",
                                         borderRadius: "50%",
-                                        backgroundColor: "red",
                                     }}
                                 >
-                                    <img src="" alt="" />
+                                    <img src={user1} alt="" />
                                 </div>
                                 <div>
                                     <p className="m-0">Tanjir Ahmed</p>
-                                    <span>3 min ago</span>
+                                    <span>3 month ago</span>
                                 </div>
                             </div>
                         </div>
@@ -148,14 +148,13 @@ const ReviewSection = () => {
                                         width: "70px",
                                         height: "70px",
                                         borderRadius: "50%",
-                                        backgroundColor: "red",
                                     }}
                                 >
-                                    <img src="" alt="" />
+                                    <img src={user1} alt="" />
                                 </div>
                                 <div>
-                                    <p className="m-0">Tanjir Ahmed</p>
-                                    <span>3 min ago</span>
+                                    <p className="m-0">Ofial Hasnat</p>
+                                    <span>5 day ago</span>
                                 </div>
                             </div>
                         </div>
@@ -224,13 +223,12 @@ const ReviewSection = () => {
                                         width: "70px",
                                         height: "70px",
                                         borderRadius: "50%",
-                                        backgroundColor: "red",
                                     }}
                                 >
-                                    <img src="" alt="" />
+                                    <img src={user1} alt="" />
                                 </div>
                                 <div>
-                                    <p className="m-0">Tanjir Ahmed</p>
+                                    <p className="m-0">Eftekher Alam</p>
                                     <span>3 min ago</span>
                                 </div>
                             </div>
