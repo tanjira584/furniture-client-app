@@ -1,0 +1,60 @@
+.delever-btn {
+    padding: 7px 20px;
+    background-color: #799a79;
+    border: 1px solid #799a79;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 4px;
+}
+.social-icons ul,
+.rating-icons ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.social-icons ul li,
+.rating-icons ul li {
+    display: inline-block;
+    margin-right: 4px;
+}
+.social-icons ul li .icon,
+.rating-icons ul li .icon {
+    color: silver;
+}
+.social-icons ul li {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #000;
+    border-radius: 50%;
+}
+.social-icons ul li .icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.update-form p {
+    font-size: 20px;
+    font-style: italic;
+}
+.update-form p span {
+    font-weight: 500;
+}
+.update-form form input {
+    width: 100%;
+    display: block;
+    padding: 7px 20px;
+    font-weight: 500;
+    border-radius: 4px;
+    border: 1px solid silver;
+}
+.update-form form input[type="submit"] {
+    margin-top: 16px;
+    padding: 7px 20px;
+    background-color: #799a79;
+    border: 1px solid #799a79;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 4px;
+}
