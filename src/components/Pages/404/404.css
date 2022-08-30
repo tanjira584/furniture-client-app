@@ -1,0 +1,21 @@
+.not-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.not-content h1 {
+    font-weight: bolder;
+    font-size: 150px;
+    opacity: 0.6;
+}
+.not-content a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 20px;
+    background-color: #799a79;
+    border: 1px solid #799a79;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 4px;
+}

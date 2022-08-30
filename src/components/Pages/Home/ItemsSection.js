@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./ItemsSection.css";
+import { Link } from "react-router-dom";
 
 const ItemsSection = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch("products.json")
+        fetch("http://localhost:5000/products")
             .then((res) => res.json())
             .then((data) => setProducts(data));
     }, []);
@@ -13,12 +14,13 @@ const ItemsSection = () => {
     return (
         <section className="items-section">
             <div className="container-md">
-                <div className="section-title mb-4">
+                <div className="section-title mb-4 d-flex align-items-center justify-content-between">
                     <h2>Our collections</h2>
+                    <Link to="/inventory">Manage Inventory</Link>
                 </div>
                 <div className="row g-4">
                     {products.map((product) => (
-                        <div className="col-md-4" key={product.id}>
+                        <div className="col-md-4" key={product._id}>
                             <div className="product h-100 border p-4 ">
                                 <div className="img mb-3">
                                     <img
@@ -49,7 +51,9 @@ const ItemsSection = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <button style={{}}>Update</button>
+                                <Link to={`/product/${product._id}`}>
+                                    Update
+                                </Link>
                             </div>
                         </div>
                     ))}

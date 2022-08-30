@@ -1,19 +1,35 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 import "./Items.css";
 
 const Items = () => {
     const [products, setProducts] = useState([]);
+    const [refatch, setRefetch] = useState(false);
 
     useEffect(() => {
-        fetch("products.json")
+        fetch("http://localhost:5000/products")
             .then((res) => res.json())
             .then((data) => setProducts(data));
-    }, []);
-    console.log(products);
+    }, [refatch]);
+
+    const handleDelete = (id) => {
+        fetch(`http://localhost:5000/product/${id}`, {
+            method: "delete",
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                if (data.acknowledged) {
+                    toast("Product Delete Successfully");
+                    setRefetch(!refatch);
+                }
+            });
+    };
+
     return (
         <div className="border-start px-3">
             {products.map((product) => (
-                <div className="mb-4 p-4 border single-item" key={product.id}>
+                <div className="mb-4 p-4 border single-item" key={product._id}>
                     <div className="row">
                         <div className="col-md-7">
                             <div>
@@ -27,7 +43,13 @@ const Items = () => {
                         <div className="col-md-5">
                             <div className="item-content">
                                 <div className="delete-btn ms-auto text-end mb-4">
-                                    <button>Delete</button>
+                                    <button
+                                        onClick={() =>
+                                            handleDelete(product._id)
+                                        }
+                                    >
+                                        Delete
+                                    </button>
                                 </div>
                                 <h5>{product.name}</h5>
                                 <span className="text-capitalize text-muted">
@@ -45,7 +67,9 @@ const Items = () => {
                                     {product.quantity}
                                 </p>
                                 <div className="update-btn text-end ms-auto">
-                                    <button>Update</button>
+                                    <Link to={`/product/${product._id}`}>
+                                        Update
+                                    </Link>
                                 </div>
                             </div>
                         </div>

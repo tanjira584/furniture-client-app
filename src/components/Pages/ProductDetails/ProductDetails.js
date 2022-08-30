@@ -1,12 +1,61 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./ProductDetails.css";
-import sofa from "./../../../images/sofa1.jpg";
 import Header from "../../share/Header";
 import Footer from "../../share/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const ProductDetails = () => {
+    const { id } = useParams();
+    const [quantity, setQty] = useState(0);
+    const [product, setProduct] = useState({});
+    const [refetch, setRefetch] = useState(false);
+
+    const handleQuantity = (e) => {
+        const qty = parseInt(e.target.value);
+        setQty(qty);
+    };
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        fetch(`http://localhost:5000/product/${id}`, {
+            method: "PUT",
+            headers: {
+                "content-type": "application/json",
+            },
+            body: JSON.stringify({ quantity }),
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                if (data.acknowledged) {
+                    toast("Stock Update Successfully");
+                    setRefetch(!refetch);
+                    setQty(0);
+                    e.target.reset();
+                }
+            });
+    };
+    const handleDelevered = (e) => {
+        fetch(`http://localhost:5000/product/${id}`, {
+            method: "PUT",
+            headers: {
+                delevered: true,
+            },
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                if (data.acknowledged) {
+                    toast("Product Deleverd Successfully");
+                    setRefetch(!refetch);
+                }
+            });
+    };
+    useEffect(() => {
+        fetch(`http://localhost:5000/product/${id}`)
+            .then((res) => res.json())
+            .then((data) => setProduct(data));
+    }, [id, refetch]);
     return (
         <div className="product-details">
             <Header></Header>
@@ -14,15 +63,16 @@ const ProductDetails = () => {
                 <div className="row g-4">
                     <div className="col-md-6">
                         <div className="product-img p-4 border">
-                            <img style={{ width: "100%" }} src={sofa} alt="" />
+                            <img
+                                style={{ width: "100%" }}
+                                src={product.img}
+                                alt=""
+                            />
                         </div>
                     </div>
                     <div className="col-md-6">
                         <div className="product-info p-4 border">
-                            <h4>
-                                Lane Tessa Alabaster Loveseat with Alabaster
-                                Pearl and Gorgeous Nature Accent Pillows
-                            </h4>
+                            <h4 className="mb-3">{product.name}</h4>
                             <div className="d-flex align-items-center justify-content-between">
                                 <div className="rating-icons">
                                     <ul className="d-inline">
@@ -95,12 +145,13 @@ const ProductDetails = () => {
                                 <div className="">
                                     <div className="price">
                                         <p className="m-0">
-                                            Price: <span>$599</span>
+                                            Price: <span>${product.price}</span>
                                         </p>
                                     </div>
                                     <div className="price">
                                         <p className="m-0">
-                                            Quantity: <span>10</span>
+                                            Quantity:{" "}
+                                            <span>{product.quantity}</span>
                                         </p>
                                     </div>
                                 </div>
@@ -109,12 +160,15 @@ const ProductDetails = () => {
                                         <p className="m-0 fw-bold">
                                             Supplyer:{" "}
                                             <span className="fst-italic">
-                                                XYZ@gmil.com
+                                                {product.supplyer}
                                             </span>
                                         </p>
                                     </div>
                                     <div className="w-50 text-end">
-                                        <button className="delever-btn">
+                                        <button
+                                            className="delever-btn"
+                                            onClick={handleDelevered}
+                                        >
                                             Delevered
                                         </button>
                                     </div>
@@ -125,11 +179,15 @@ const ProductDetails = () => {
                             <div>
                                 <h4 className="mb-3">Update Stock</h4>
                                 <p className="m-0">
-                                    On Stock: <span>10</span>
+                                    On Stock: <span>{product.quantity}</span>
                                 </p>
                             </div>
-                            <form action="">
-                                <input type="text" />
+                            <form onSubmit={handleSubmit}>
+                                <input
+                                    type="number"
+                                    name="quantity"
+                                    onChange={handleQuantity}
+                                />
                                 <input type="submit" value="Update" />
                             </form>
                         </div>
@@ -137,15 +195,7 @@ const ProductDetails = () => {
                     <div className="col-md-6">
                         <div className="product-desc p-4 border">
                             <h4 className="mb-3">Description</h4>
-                            <p className="">
-                                Criss-cross lattice overlays the two glass
-                                fronted door and sides which flank the central
-                                open shelves in this inviting and oh-so-useful
-                                new credenza. With three drawers above for even
-                                more storage options, and an attractive Mabry
-                                Mill Burnished Blue, endless possibilities are
-                                at your fingertips!
-                            </p>
+                            <p className="">{product.desc}</p>
                             <p>
                                 A sprung slatted base gives natural bounce,
                                 adjusting to where pressure is most exerted to

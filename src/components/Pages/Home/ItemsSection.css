@@ -1,13 +1,17 @@
 .items-section {
     padding: 50px 0;
 }
-.product button {
+.product a {
+    text-decoration: none;
     padding: 10px 20px;
     background-color: #799a79;
     border: 1px solid #799a79;
     color: #fff;
     font-weight: 500;
     border-radius: 4px;
+}
+.product a:hover {
+    color: #fff;
 }
 .product {
     position: relative;
@@ -30,4 +34,16 @@
 }
 .product:hover .img img {
     transform: scale(1.02);
+}
+.section-title a {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #799a79;
+    border: 1px solid #799a79;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 4px;
+}
+.section-title a:hover {
+    color: #fff;
 }

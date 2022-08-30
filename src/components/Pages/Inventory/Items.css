@@ -7,14 +7,7 @@
     bottom: 0;
     right: 0;
 }
-.item-content .update-btn button {
-    padding: 7px 20px;
-    background-color: #799a79;
-    border: 1px solid #799a79;
-    color: #fff;
-    font-weight: 500;
-    border-radius: 4px;
-}
+
 .item-content .delete-btn button {
     padding: 7px 20px;
     background-color: #dc3545;
@@ -34,4 +27,18 @@
 }
 .single-item:hover img {
     transform: scale(1.02);
+}
+.add-btn a,
+.item-content .update-btn a {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #799a79;
+    border: 1px solid #799a79;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 4px;
+}
+.add-btn a:hover,
+.item-content .update-btn a:hover {
+    color: #fff;
 }

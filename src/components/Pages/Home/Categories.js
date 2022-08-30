@@ -16,7 +16,7 @@ const Categories = () => {
                 </div>
                 <div className="row g-0">
                     <div className="col-md-2">
-                        <div className="catagory border">
+                        <div className="catagory border border-end-0">
                             <a href="/">
                                 <div className="img">
                                     <img src={living} alt="" />
@@ -26,7 +26,7 @@ const Categories = () => {
                         </div>
                     </div>
                     <div className="col-md-2">
-                        <div className="catagory border">
+                        <div className="catagory border border-end-0">
                             {" "}
                             <a href="/">
                                 <div className="img">
@@ -37,7 +37,7 @@ const Categories = () => {
                         </div>
                     </div>
                     <div className="col-md-2">
-                        <div className="catagory border">
+                        <div className="catagory border border-end-0">
                             {" "}
                             <a href="/">
                                 <div className="img">
@@ -48,7 +48,7 @@ const Categories = () => {
                         </div>
                     </div>
                     <div className="col-md-2">
-                        <div className="catagory border">
+                        <div className="catagory border border-end-0">
                             {" "}
                             <a href="/">
                                 <div className="img">
@@ -59,7 +59,7 @@ const Categories = () => {
                         </div>
                     </div>
                     <div className="col-md-2">
-                        <div className="catagory border">
+                        <div className="catagory border border-end-0">
                             {" "}
                             <a href="/">
                                 <div className="img">

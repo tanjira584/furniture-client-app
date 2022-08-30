@@ -71,6 +71,7 @@ const Header = () => {
                                         <button
                                             onClick={() => signOut(auth)}
                                             className="border-0 bg-transparent nav-link text-light"
+                                            style={{ fontWeight: "500" }}
                                         >
                                             Signout
                                         </button>

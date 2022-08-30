@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Footer from "../../share/Footer";
 import Header from "../../share/Header";
 import "./Inventory.css";
@@ -15,6 +16,14 @@ const Inventory = () => {
                         <Sidebar></Sidebar>
                     </div>
                     <div className="col-md-9">
+                        <div className="d-flex align-items-center justify-content-between mb-4 px-3">
+                            <div>
+                                <h4 className="m-0">All Products Goes Here</h4>
+                            </div>
+                            <div className="add-btn">
+                                <Link to="/add-item">Add New Item</Link>
+                            </div>
+                        </div>
                         <Items></Items>
                     </div>
                 </div>
