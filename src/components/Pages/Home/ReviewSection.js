@@ -1,8 +1,10 @@
-import { faStar } from "@fortawesome/free-regular-svg-icons";
+import { faStar, faStarHalfAlt } from "@fortawesome/free-solid-svg-icons";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import user1 from "./../../../images/user1.png";
+import user2 from "./../../../images/test1.jpg";
+import user3 from "./../../../images/test2.jpg";
 import "./ReviewSection.css";
 import google from "./../../../images/google.svg";
 const ReviewSection = () => {
@@ -36,7 +38,7 @@ const ReviewSection = () => {
                                             </li>
                                             <li>
                                                 <FontAwesomeIcon
-                                                    className="icon"
+                                                    className="icon "
                                                     icon={faStar}
                                                 ></FontAwesomeIcon>
                                             </li>
@@ -56,12 +58,12 @@ const ReviewSection = () => {
                                     <p className="m-0">
                                         hear we are again at half price suites
                                         this our 5th leather suit allways a good
-                                        buy and service with a smile no hard
-                                        sell pushing you to buy just relax and
-                                        answer all your questions to make up
-                                        your own mind highly recommend you wont
-                                        get better value for money very kind
-                                        regards dave & sheila ward 🥰🥰🥰
+                                        buy and a smile no hard sell pushing you
+                                        to buy just relax and answer all your
+                                        questions to make up your own mind
+                                        highly recommend you wont get better
+                                        value for money very kind regards dave &
+                                        sheila ward🥰🥰🥰
                                     </p>
                                 </div>
                             </div>
@@ -116,7 +118,7 @@ const ReviewSection = () => {
                                             <li>
                                                 <FontAwesomeIcon
                                                     className="icon"
-                                                    icon={faStar}
+                                                    icon={faStarHalfAlt}
                                                 ></FontAwesomeIcon>
                                             </li>
                                         </ul>
@@ -134,20 +136,20 @@ const ReviewSection = () => {
                                         answer all your questions to make up
                                         your own mind highly recommend you wont
                                         get better value for money very kind
-                                        regards dave & sheila ward 🥰🥰🥰
+                                        regards dave & sheila ward
                                     </p>
                                 </div>
                             </div>
                             <div className="user-block d-flex align-items-center">
                                 <div
-                                    className="user me-3"
+                                    className="user me-3 rounded rounded-circle overflow-hidden"
                                     style={{
                                         width: "70px",
                                         height: "70px",
                                         borderRadius: "50%",
                                     }}
                                 >
-                                    <img src={user1} alt="" />
+                                    <img src={user2} alt="" />
                                 </div>
                                 <div>
                                     <p className="m-0">Ofial Hasnat</p>
@@ -188,7 +190,7 @@ const ReviewSection = () => {
                                             </li>
                                             <li>
                                                 <FontAwesomeIcon
-                                                    className="icon"
+                                                    className="icon text-muted"
                                                     icon={faStar}
                                                 ></FontAwesomeIcon>
                                             </li>
@@ -207,20 +209,20 @@ const ReviewSection = () => {
                                         answer all your questions to make up
                                         your own mind highly recommend you wont
                                         get better value for money very kind
-                                        regards dave & sheila ward 🥰🥰🥰
+                                        regards dave & sheila ward
                                     </p>
                                 </div>
                             </div>
                             <div className="user-block d-flex align-items-center">
                                 <div
-                                    className="user me-3"
+                                    className="user me-3 rounded rounded-circle overflow-hidden"
                                     style={{
                                         width: "70px",
                                         height: "70px",
                                         borderRadius: "50%",
                                     }}
                                 >
-                                    <img src={user1} alt="" />
+                                    <img src={user3} alt="" />
                                 </div>
                                 <div>
                                     <p className="m-0">Eftekher Alam</p>

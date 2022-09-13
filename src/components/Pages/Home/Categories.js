@@ -6,6 +6,8 @@ import chair from "./../../../images/chair1.jpg";
 import sofa from "./../../../images/sofa1.jpg";
 import loveseat from "./../../../images/loveseat.jpg";
 import media from "./../../../images/media1.jpg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const Categories = () => {
     return (
@@ -17,65 +19,115 @@ const Categories = () => {
                 <div className="row g-0">
                     <div className="col-md-2">
                         <div className="catagory border border-end-0">
-                            <a href="/">
+                            <a href="/products?category=living room sets">
                                 <div className="img">
                                     <img src={living} alt="" />
                                 </div>
-                                <p className="m-0">Living Room Sets</p>{" "}
+                                <div>
+                                    <p className="m-0">
+                                        Living Room Sets
+                                        <FontAwesomeIcon
+                                            className="arrow-icon"
+                                            icon={faArrowRight}
+                                        ></FontAwesomeIcon>
+                                    </p>{" "}
+                                </div>
                             </a>
                         </div>
                     </div>
                     <div className="col-md-2">
                         <div className="catagory border border-end-0">
                             {" "}
-                            <a href="/">
+                            <a href="/products?category=tables">
                                 <div className="img">
                                     <img src={table} alt="" />
                                 </div>
-                                <p className="m-0">Tables</p>{" "}
-                            </a>
-                        </div>
-                    </div>
-                    <div className="col-md-2">
-                        <div className="catagory border border-end-0">
-                            {" "}
-                            <a href="/">
-                                <div className="img">
-                                    <img src={chair} alt="" />
+                                <div>
+                                    {" "}
+                                    <p className="m-0">
+                                        Tables
+                                        <FontAwesomeIcon
+                                            className="arrow-icon"
+                                            icon={faArrowRight}
+                                        ></FontAwesomeIcon>
+                                    </p>{" "}
                                 </div>
-                                <p className="m-0">Chairs</p>
                             </a>
                         </div>
                     </div>
+
                     <div className="col-md-2">
                         <div className="catagory border border-end-0">
                             {" "}
-                            <a href="/">
+                            <a href="/products?category=sofa">
                                 <div className="img">
                                     <img src={sofa} alt="" />
                                 </div>
-                                <p className="m-0">Sofa</p>{" "}
+                                <div>
+                                    <p className="m-0">
+                                        Sofa
+                                        <FontAwesomeIcon
+                                            className="arrow-icon"
+                                            icon={faArrowRight}
+                                        ></FontAwesomeIcon>
+                                    </p>{" "}
+                                </div>
                             </a>
                         </div>
                     </div>
                     <div className="col-md-2">
                         <div className="catagory border border-end-0">
                             {" "}
-                            <a href="/">
+                            <a href="/products?category=loveseat">
                                 <div className="img">
                                     <img src={loveseat} alt="" />
                                 </div>
-                                <p className="m-0">Loveseat</p>{" "}
+                                <div>
+                                    <p className="m-0">
+                                        Loveseat
+                                        <FontAwesomeIcon
+                                            className="arrow-icon"
+                                            icon={faArrowRight}
+                                        ></FontAwesomeIcon>
+                                    </p>{" "}
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div className="col-md-2">
+                        <div className="catagory border border-end-0">
+                            {" "}
+                            <a href="/products?category=chairs">
+                                <div className="img">
+                                    <img src={chair} alt="" />
+                                </div>
+                                <div>
+                                    <p className="m-0">
+                                        Chairs
+                                        <FontAwesomeIcon
+                                            className="arrow-icon"
+                                            icon={faArrowRight}
+                                        ></FontAwesomeIcon>
+                                    </p>
+                                </div>
                             </a>
                         </div>
                     </div>
                     <div className="col-md-2">
                         <div className="catagory border">
-                            <a href="/">
+                            <a href="/products?category=media center">
                                 <div className="img">
                                     <img src={media} alt="" />
                                 </div>
-                                <p className="m-0">Media Center </p>
+                                <div>
+                                    <p className="m-0">
+                                        Media Center
+                                        <FontAwesomeIcon
+                                            className="arrow-icon"
+                                            icon={faArrowRight}
+                                        ></FontAwesomeIcon>
+                                    </p>
+                                </div>
                             </a>
                         </div>
                     </div>

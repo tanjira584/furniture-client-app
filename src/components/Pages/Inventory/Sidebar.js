@@ -9,16 +9,24 @@ const Sidebar = () => {
                 <h4>Living Room Sets</h4>
                 <ul>
                     <li>
-                        <Link to="/">Fabric Living Room Sets</Link>
+                        <Link to="/products?category=living room sets&subCategory=fabric living room sets">
+                            Fabric Living Room Sets
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/">Motion Living Room Sets</Link>
+                        <Link to="/products?category=living room sets&subCategory=motion living room sets">
+                            Motion Living Room Sets
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/">Leather Living Sets</Link>
+                        <Link to="/products?category=living room sets&subCategory=leather living room sets">
+                            Leather Living Room Sets
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/">Sleeper Living Sets</Link>
+                        <Link to="/products?category=living room sets&subCategory=sleeper living room sets">
+                            Sleeper Living Room Sets
+                        </Link>
                     </li>
                 </ul>
             </div>
@@ -26,16 +34,24 @@ const Sidebar = () => {
                 <h4>Sofa</h4>
                 <ul>
                     <li>
-                        <Link to="/">Fabric Sofa</Link>
+                        <Link to="/products?category=sofa&subCategory=fabric sofa">
+                            Fabric Sofa
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/">Motion Sofa</Link>
+                        <Link to="/products?category=sofa&subCategory=motion sofa">
+                            Motion Sofa
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/">Leather Sofa</Link>
+                        <Link to="/products?category=sofa&subCategory=leather sofa">
+                            Leather Sofa
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/">Sleeper Sofa</Link>
+                        <Link to="/products?category=sofa&subCategory=sleeper sofa">
+                            Sleeper Sofa
+                        </Link>
                     </li>
                 </ul>
             </div>
@@ -43,16 +59,24 @@ const Sidebar = () => {
                 <h4>Loveseat</h4>
                 <ul>
                     <li>
-                        <Link to="/">Fabric Loveseat</Link>
+                        <Link to="/products?category=loveseat&subCategory=fabric loveseat">
+                            Fabric Loveseat
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/">Motion Loveseat</Link>
+                        <Link to="/products?category=loveseat&subCategory=motion loveseat">
+                            Motion Loveseat
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/">Leather Loveseat</Link>
+                        <Link to="/products?category=loveseat&subCategory=leather loveseat">
+                            Leather Loveseat
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/">Sleeper Loveseat</Link>
+                        <Link to="/products?category=loveseat&subCategory=sleeper loveseat">
+                            Sleeper Loveseat
+                        </Link>
                     </li>
                 </ul>
             </div>
@@ -60,16 +84,24 @@ const Sidebar = () => {
                 <h4>Chairs</h4>
                 <ul>
                     <li>
-                        <Link to="/">Ottomans</Link>
+                        <Link to="/products?category=chairs&subCategory=ottomans">
+                            Ottomans
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/">Chaises</Link>
+                        <Link to="/products?category=chairs&subCategory=chaises">
+                            Chaises
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/">Accent Chairs</Link>
+                        <Link to="/products?category=chairs&subCategory=accent chairs">
+                            Accent Chairs
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/">Swivel Chairs</Link>
+                        <Link to="/products?category=chairs&subCategory=swivel chairs">
+                            Swivel Chairs
+                        </Link>
                     </li>
                 </ul>
             </div>
@@ -77,16 +109,24 @@ const Sidebar = () => {
                 <h4>Tables</h4>
                 <ul>
                     <li>
-                        <Link to="/">Coctail Tables</Link>
+                        <Link to="/products?category=tables&subCategory=coctail tables">
+                            Coctail Tables
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/">End Tables</Link>
+                        <Link to="/products?category=tables&subCategory=end tables">
+                            End Tables
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/">Console Tables</Link>
+                        <Link to="/products?category=tables&subCategory=console tables">
+                            Console Tables
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/">Coctail End Table Group</Link>
+                        <Link to="/products?category=tables&subCategory=coctail end table group">
+                            Coctail End Table Group
+                        </Link>
                     </li>
                 </ul>
             </div>
@@ -94,16 +134,24 @@ const Sidebar = () => {
                 <h4>Media Center</h4>
                 <ul>
                     <li>
-                        <Link to="/">Accent Cabinet</Link>
+                        <Link to="/products?category=media center&subCategory=accent cabinet">
+                            Accent Cabinet
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/">TV Carts</Link>
+                        <Link to="/products?category=media center&subCategory=tv carts">
+                            TV Carts
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/">Plasma Stands</Link>
+                        <Link to="/products?category=media center&subCategory=plasma stands">
+                            Plasma Stands
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/">Media Chests</Link>
+                        <Link to="/products?category=media center&subCategory=media chests">
+                            Media Chests
+                        </Link>
                     </li>
                 </ul>
             </div>

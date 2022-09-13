@@ -4,8 +4,14 @@ import Header from "../../share/Header";
 import Footer from "../../share/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { useParams } from "react-router-dom";
 import { toast } from "react-toastify";
+import {
+    faFacebookF,
+    faPinterestP,
+    faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 
 const ProductDetails = () => {
     const { id } = useParams();
@@ -116,25 +122,25 @@ const ProductDetails = () => {
                                         <li>
                                             <FontAwesomeIcon
                                                 className="icon"
-                                                icon={faStar}
+                                                icon={faFacebookF}
                                             ></FontAwesomeIcon>
                                         </li>
                                         <li>
                                             <FontAwesomeIcon
                                                 className="icon"
-                                                icon={faStar}
+                                                icon={faPinterestP}
                                             ></FontAwesomeIcon>
                                         </li>
                                         <li>
                                             <FontAwesomeIcon
                                                 className="icon"
-                                                icon={faStar}
+                                                icon={faTwitter}
                                             ></FontAwesomeIcon>
                                         </li>
                                         <li>
                                             <FontAwesomeIcon
                                                 className="icon"
-                                                icon={faStar}
+                                                icon={faEnvelope}
                                             ></FontAwesomeIcon>
                                         </li>
                                     </ul>

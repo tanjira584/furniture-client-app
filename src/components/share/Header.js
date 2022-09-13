@@ -10,6 +10,10 @@ import { signOut } from "firebase/auth";
 
 const Header = () => {
     const [user] = useAuthState(auth);
+    const handleSignout = () => {
+        signOut(auth);
+        localStorage.removeItem("accessToken");
+    };
     return (
         <div>
             <section className="header-top d-none d-md-block">
@@ -62,14 +66,24 @@ const Header = () => {
                                     </Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/inventory">
+                                    <Link className="nav-link" to="/products">
                                         Inventory
                                     </Link>
                                 </li>
+                                {user && (
+                                    <li className="nav-item">
+                                        <Link
+                                            className="nav-link"
+                                            to="/my-items"
+                                        >
+                                            My Items
+                                        </Link>
+                                    </li>
+                                )}
                                 {user ? (
                                     <li className="nav-item">
                                         <button
-                                            onClick={() => signOut(auth)}
+                                            onClick={handleSignout}
                                             className="border-0 bg-transparent nav-link text-light"
                                             style={{ fontWeight: "500" }}
                                         >

@@ -8,6 +8,7 @@ import RequireAuth from "./components/Pages/Auth/RequireAuth";
 import Signup from "./components/Pages/Auth/Signup";
 import Home from "./components/Pages/Home/Home";
 import Inventory from "./components/Pages/Inventory/Inventory";
+import MyItem from "./components/Pages/MyItem/MyItem";
 import ProductDetails from "./components/Pages/ProductDetails/ProductDetails";
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home></Home>}></Route>
                 <Route
-                    path="/inventory"
+                    path="/products"
                     element={
                         <RequireAuth>
                             <Inventory></Inventory>
@@ -36,6 +37,14 @@ function App() {
                     element={
                         <RequireAuth>
                             <AddProduct></AddProduct>
+                        </RequireAuth>
+                    }
+                ></Route>
+                <Route
+                    path="/my-items"
+                    element={
+                        <RequireAuth>
+                            <MyItem></MyItem>
                         </RequireAuth>
                     }
                 ></Route>

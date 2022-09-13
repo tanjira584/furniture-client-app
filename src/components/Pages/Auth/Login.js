@@ -27,6 +27,7 @@ const Login = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         signInWithEmailAndPassword(user.email, user.password);
+
         e.target.reset();
         setUser({ email: "", password: "" });
     };
@@ -34,10 +35,25 @@ const Login = () => {
         signInWithGoogle();
     };
     if (authuser || euser || guser) {
+        fetch("http://localhost:5000/login", {
+            method: "POST",
+            headers: {
+                "content-type": "application/json",
+            },
+            body: JSON.stringify({ email: authuser.email }),
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                localStorage.setItem("accessToken", data.accessToken);
+            });
+
         return <Navigate to={from}></Navigate>;
     }
     if (gloading || eloading) {
         return <p className="text-center mt-5">Loading...</p>;
+    }
+
+    if (euser || guser) {
     }
     return (
         <div>

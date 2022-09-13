@@ -1,17 +1,22 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { toast } from "react-toastify";
 import "./Items.css";
 
 const Items = () => {
     const [products, setProducts] = useState([]);
     const [refatch, setRefetch] = useState(false);
+    const search = useLocation().search;
+    const category = new URLSearchParams(search).get("category");
+    const subCategory = new URLSearchParams(search).get("subCategory");
 
     useEffect(() => {
-        fetch("http://localhost:5000/products")
+        fetch(
+            `http://localhost:5000/products?category=${category}&subCategory=${subCategory}`
+        )
             .then((res) => res.json())
             .then((data) => setProducts(data));
-    }, [refatch]);
+    }, [refatch, category, subCategory]);
 
     const handleDelete = (id) => {
         fetch(`http://localhost:5000/product/${id}`, {

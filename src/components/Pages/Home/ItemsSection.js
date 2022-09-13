@@ -16,7 +16,7 @@ const ItemsSection = () => {
             <div className="container-md">
                 <div className="section-title mb-4 d-flex align-items-center justify-content-between">
                     <h2>Our collections</h2>
-                    <Link to="/inventory">Manage Inventory</Link>
+                    <Link to="/products">Manage Inventory</Link>
                 </div>
                 <div className="row g-4">
                     {products.map((product) => (
