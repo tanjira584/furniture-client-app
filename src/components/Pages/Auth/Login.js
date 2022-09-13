@@ -35,7 +35,7 @@ const Login = () => {
         signInWithGoogle();
     };
     if (authuser || euser || guser) {
-        fetch("http://localhost:5000/login", {
+        fetch("https://afternoon-taiga-81908.herokuapp.com/login", {
             method: "POST",
             headers: {
                 "content-type": "application/json",

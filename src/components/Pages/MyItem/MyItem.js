@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import auth from "../../../firebase.init";
 import Footer from "../../share/Footer";
 import Header from "../../share/Header";
-import Items from "../Inventory/Items";
 import Sidebar from "../Inventory/Sidebar";
 import "./MyItem.css";
 
@@ -16,12 +15,15 @@ const MyItem = () => {
     const token = localStorage.getItem("accessToken");
     useEffect(() => {
         if (!loading) {
-            fetch(`http://localhost:5000/my-items?email=${user.email}`, {
-                method: "GET",
-                headers: {
-                    authorization: `Bearer ${token}`,
-                },
-            })
+            fetch(
+                `https://afternoon-taiga-81908.herokuapp.com/my-items?email=${user.email}`,
+                {
+                    method: "GET",
+                    headers: {
+                        authorization: `Bearer ${token}`,
+                    },
+                }
+            )
                 .then((res) => res.json())
                 .then((data) => setProducts(data));
         }
@@ -33,7 +35,7 @@ const MyItem = () => {
             "Are you sure want to delete this item?"
         );
         if (proceed) {
-            const uri = `http://localhost:5000/product/${id}`;
+            const uri = `https://afternoon-taiga-81908.herokuapp.com/product/${id}`;
             fetch(uri, {
                 method: "DELETE",
             })

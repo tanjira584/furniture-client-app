@@ -25,7 +25,7 @@ const ProductDetails = () => {
     };
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch(`http://localhost:5000/product/${id}`, {
+        fetch(`https://afternoon-taiga-81908.herokuapp.com/product/${id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json",
@@ -43,7 +43,7 @@ const ProductDetails = () => {
             });
     };
     const handleDelevered = (e) => {
-        fetch(`http://localhost:5000/product/${id}`, {
+        fetch(`https://afternoon-taiga-81908.herokuapp.com/product/${id}`, {
             method: "PUT",
             headers: {
                 delevered: true,
@@ -58,7 +58,7 @@ const ProductDetails = () => {
             });
     };
     useEffect(() => {
-        fetch(`http://localhost:5000/product/${id}`)
+        fetch(`https://afternoon-taiga-81908.herokuapp.com/product/${id}`)
             .then((res) => res.json())
             .then((data) => setProduct(data));
     }, [id, refetch]);

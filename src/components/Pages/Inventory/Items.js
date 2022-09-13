@@ -12,14 +12,14 @@ const Items = () => {
 
     useEffect(() => {
         fetch(
-            `http://localhost:5000/products?category=${category}&subCategory=${subCategory}`
+            `https://afternoon-taiga-81908.herokuapp.com/products?category=${category}&subCategory=${subCategory}`
         )
             .then((res) => res.json())
             .then((data) => setProducts(data));
     }, [refatch, category, subCategory]);
 
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/product/${id}`, {
+        fetch(`https://afternoon-taiga-81908.herokuapp.com/product/${id}`, {
             method: "delete",
         })
             .then((res) => res.json())
